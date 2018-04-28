@@ -42,14 +42,18 @@
 
                 <!-- Hero content: will be in the middle -->
                 <div class="hero-body">
-                    <GmapMap v-bind:center="{lat:10, lng:10}" v-bind:zoom="7"
-                        style="width: 100%; height: 900px">
-                        <GmapMarker
-                            v-bind:key="index"
+                        <gmap-map
+                        :center="center"
+                        :zoom="17"
+                        style="width:100%;  height: 500px;"
+                        >
+                        <gmap-marker
+                            :key="index"
                             v-for="(m, index) in markers"
-                            v-bind:position="m.position"
-                            v-bind:clickable="true"/>
-                    </GmapMap>
+                            :position="m.position"
+                            @click="center=m.position"
+                        ></gmap-marker>
+                        </gmap-map>
                 </div>
             </section>
         </div>
@@ -57,31 +61,55 @@
 </template>
 
 <script>
-
 import firebase from 'firebase'
-
 export default {
-    name: 'Map',
-    data() {
-        return {
-            center: { lat: 62, lng: 10.0},
-            makers: [
-                {position: { lat: 62, lng: 10.0} },
-                {position: { lat: 11, lng: 11.0} }
-            ]
-        }
-    },
-    methods: {
-        logout: function() {
-            firebase.auth().signOut().then(() => {
-                this.$router.replace('login')
+  name: "GoogleMap",
+  data() {
+    return {
+      // default to Montreal to keep it simple
+      // change this to whatever makes sense
+      center: { lat: 45.508, lng: -73.587 },
+      markers: [],
+      places: [],
+      currentPlace: null
+    };
+  },
+
+  mounted() {
+    this.geolocate();
+    this.addMarker();
+  },
+
+  methods:{
+
+    logout: function() {
+        firebase.auth().signOut().then(() => {
+        this.$router.replace('login')
             })
-        },
-        gotoHome: function() {
-            this.$router.replace('admin')
-        }
+    },
+    gotoHome: function() {
+        this.$router.replace('admin')
+    },
+    addMarker: function() {
+        const marker = {
+          lat: 19.116426,  //Here access the coordinates from firebase database
+          lng: 72.8564961  //Here access the coordinates from firebase database
+        };
+        this.markers.push({ position: marker });
+        this.places.push(this.currentPlace);
+        this.center = marker;
+        this.currentPlace = null;
+    },
+    geolocate: function() {
+      navigator.geolocation.getCurrentPosition(position => {
+        this.center = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        };
+      });
     }
-}
+  }
+};
 </script>
 
 <style>

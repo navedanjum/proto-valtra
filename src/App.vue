@@ -5,9 +5,14 @@
 </template>
 
 <script>
+import GoogleMap from "./components/Map";
+
 export default {
-  name: 'App'
-}
+  name: "App",
+  components: {
+    GoogleMap
+  }
+};
 </script>
 
 <style>
