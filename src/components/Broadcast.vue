@@ -62,7 +62,13 @@ export default {
   },
 
   methods:{
-
+    sendMessage: function() {
+       var msg = document.getElementById("message").value
+       msg = msg.trim()
+       if(msg.length > 0){
+            alert(msg); }
+        
+    },
     logout: function() {
         firebase.auth().signOut().then(() => {
         this.$router.replace('login')
