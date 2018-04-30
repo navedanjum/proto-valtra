@@ -39,22 +39,6 @@
                     </div>
                     </nav>
                 </div>
-
-                <!-- Hero content: will be in the middle -->
-                <div class="hero-body">
-                        <gmap-map
-                        :center="center"
-                        :zoom="17"
-                        style="width:100%;  height: 500px;"
-                        >
-                        <gmap-marker
-                            :key="index"
-                             v-for="(m, index) in markers"
-                            :position="m.position"
-                            @click="center=m.position"
-                        ></gmap-marker>
-                        </gmap-map>
-                </div>
             </section>
         </div>
     </div>
@@ -63,20 +47,11 @@
 <script>
 import firebase from 'firebase'
 export default {
-  name: "GoogleMap",  //Check if this name is correct
+  name: "Broadcast", 
   data() {
     return {
-      // default to Montreal to keep it simple
-      // change this to whatever makes sense
-      center: { lat: 45.508, lng: -73.587 },
-      markers: [],
-      currentPlace: null
+        
     };
-  },
-
-  mounted() {
-    this.geolocate();
-    this.addMarker();
   },
 
   methods:{
@@ -88,23 +63,6 @@ export default {
     },
     gotoHome: function() {
         this.$router.replace('admin')
-    },
-    addMarker: function() {
-        const marker = {
-          lat: 19.116426,  //Here access the coordinates from firebase database
-          lng: 72.8564961  //Here access the coordinates from firebase database
-        };
-        this.markers.push({ position: marker });
-        this.center = marker;
-        this.currentPlace = null;
-    },
-    geolocate: function() {
-      navigator.geolocation.getCurrentPosition(position => {
-        this.center = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude
-        };
-      });
     }
   }
 };

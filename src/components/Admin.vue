@@ -26,7 +26,7 @@
                 </a>
                 <a class="navbar">
                   <span class="navbar-item bgcolor">
-                    <a class="button size">Broadcast</a>
+                    <a class="button size" v-on:click="gotoBroadcast">Broadcast</a>
                   </span>
                 </a>
               </div>
@@ -124,6 +124,9 @@ export default {
     },
     gotoHome: function() {
         this.$router.replace('admin')
+    },
+    gotoBroadcast: function() {
+        this.$router.replace('broadcast')
     }
   }
 }

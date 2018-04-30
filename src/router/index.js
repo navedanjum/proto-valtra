@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Admin from '@/components/Admin'
 import Login from '@/components/Login'
 import Map from '@/components/Map'
+import Broadcast from '@/components/Broadcast'
 
 import firebase from 'firebase'
 
@@ -39,7 +40,15 @@ let router = new Router({
       meta: {
         requiresAuth: true
       }
-    }
+    },
+   {
+      path: '/broadcast',
+      name: 'Broadcast',
+      component: Broadcast,
+      meta: {
+        requiresAuth: true
+      }
+    } 
   ]
 })
 
