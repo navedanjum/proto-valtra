@@ -63,7 +63,7 @@
 <script>
 import firebase from 'firebase'
 export default {
-  name: "GoogleMap",  //Check if this name is correct
+  name: "Map",  //Check if this name is correct
   data() {
     return {
       // default to Montreal to keep it simple

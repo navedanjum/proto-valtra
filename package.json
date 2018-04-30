@@ -2,7 +2,7 @@
   "name": "webfrontend",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "mushah <mushah@ttu.ee>",
+  "authors": "mushah <mushah@ttu.ee>, ansarin <ansari@ut.ee",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",

@@ -38,6 +38,13 @@
                         </div>
                     </div>
                     </nav>
+                    <div class="brdcast">
+                    <p style="white-space: pre-line;">{{ message }}</p>
+                    <br>
+                    <textarea id="message" v-model="message" placeholder="Message to broadcast"></textarea>
+                    <br>
+                    <button class="sendButton" v-on:click="sendMessage">Send</button>
+                    </div>
                 </div>
             </section>
         </div>
@@ -74,5 +81,24 @@ export default {
  }
 .textcolor {
     color: #FFFFFF
+}
+
+.brdcast {
+height: 500px
+}
+
+textarea {
+  width: 80%;
+  height:30%;
+}
+
+.sendButton {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 7px 14px;
+    margin-left: -76%
 }
 </style>
