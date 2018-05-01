@@ -37,6 +37,7 @@ let router = new Router({
       path: '/map',
       name: 'Map',
       component: Map,
+      props: true,
       meta: {
         requiresAuth: true
       }

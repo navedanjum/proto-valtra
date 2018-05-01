@@ -64,7 +64,7 @@
                       <img src="../assets/valtrasignature.png" style="width: 50px; height: 50px">
                     </td>
                     <td>{{user.Name}}</td>
-                    <td><a @click="loadMap">{{user.Latitude}} / {{user.Longitude}}</a></td>
+                    <td><a @click="loadMap(user.Latitude,user.Longitude)">{{user.Latitude}} / {{user.Longitude}}</a></td>
                     <td>{{user.Status}}</td>
                 </tr>
             </tbody>
@@ -119,8 +119,9 @@ export default {
     created: function() {  
       database.ref('Users').on('child_added', snapshot => this.users.push(snapshot.val()))
     },
-    loadMap: function(){
-      this.$router.replace('map')
+    loadMap: function(lati, lon){
+      //alert(lati + ", " + lon)
+      this.$router.push({name:'Map',params:{lati: lati, lon: lon}})
     },
     gotoHome: function() {
         this.$router.replace('admin')

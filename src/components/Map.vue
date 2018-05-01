@@ -64,6 +64,7 @@
 import firebase from 'firebase'
 export default {
   name: "Map",  //Check if this name is correct
+  props: ["lati", "lon"],
   data() {
     return {
       // default to Montreal to keep it simple
@@ -77,6 +78,7 @@ export default {
   mounted() {
     this.geolocate();
     this.addMarker();
+    //alert(this.lati)
   },
 
   methods:{
@@ -91,8 +93,8 @@ export default {
     },
     addMarker: function() {
         const marker = {
-          lat: 19.116426,  //Here access the coordinates from firebase database
-          lng: 72.8564961  //Here access the coordinates from firebase database
+          lat: this.lati, //19.116426,  //Here access the coordinates from firebase database
+          lng: this.lon //72.8564961  //Here access the coordinates from firebase database
         };
         this.markers.push({ position: marker });
         this.center = marker;

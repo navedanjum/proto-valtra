@@ -96,6 +96,7 @@ height: 500px
 textarea {
   width: 80%;
   height:30%;
+  border-radius: 5px;
 }
 
 .sendButton {
