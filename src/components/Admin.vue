@@ -124,6 +124,8 @@ export default {
       this.$router.push({name:'Map',params:{lati: lati, lon: lon}})
     },
     gotoHome: function() {
+        //this.$router.replace('admin')
+        this.$router.go(this.$router.currentRoute)
         this.$router.replace('admin')
     },
     gotoBroadcast: function() {

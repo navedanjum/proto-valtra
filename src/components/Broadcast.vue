@@ -53,6 +53,8 @@
 
 <script>
 import firebase from 'firebase'
+
+const database = firebase.database()
 export default {
   name: "Broadcast", 
   data() {
@@ -66,6 +68,7 @@ export default {
        var msg = document.getElementById("message").value
        msg = msg.trim()
        if(msg.length > 0){
+           database.ref('Broadcast/Message').push('msg');
             alert(msg); }
         
     },

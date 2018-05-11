@@ -12,14 +12,14 @@ Vue.use(Router)
 
 let router = new Router({
   routes: [
-    {
-      path: '*',
-      redirect: '/login'
-    },
-    {
-      path: '/',
-      redirect: '/login'
-    },
+    // {
+    //   path: '*',
+    //   redirect: '/login'
+    // },
+    // {
+    //   path: '/',
+    //   redirect: '/login'
+    // },
     {
       path: '/login',
       name: 'Login',
@@ -29,38 +29,38 @@ let router = new Router({
       path: '/admin',
       name: 'Admin',
       component: Admin,
-      meta: {
-        requiresAuth: true
-      }
+      // meta: {
+      //   requiresAuth: true
+      // }
     },
     {
       path: '/map',
       name: 'Map',
       component: Map,
       props: true,
-      meta: {
-        requiresAuth: true
-      }
+      // meta: {
+      //   requiresAuth: true
+      // }
     },
    {
       path: '/broadcast',
       name: 'Broadcast',
       component: Broadcast,
-      meta: {
-        requiresAuth: true
-      }
+      // meta: {
+      //   requiresAuth: true
+      // }
     } 
   ]
 })
 
 
-router.beforeEach((to, from, next) => {
-  let currentUser = firebase.auth().currentUser;
-  let requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+// router.beforeEach((to, from, next) => {
+//   let currentUser = firebase.auth().currentUser;
+//   let requiresAuth = to.matched.some(record => record.meta.requiresAuth);
 
-  if (requiresAuth && !currentUser) next('login')
-  else if (!requiresAuth && currentUser) next('admin')
-  else next()
-})
+//   if (requiresAuth && !currentUser) next('login')
+//   else if (!requiresAuth && currentUser) next('admin')
+//   else next()
+// })
 
 export default router
