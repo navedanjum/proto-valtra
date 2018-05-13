@@ -10,8 +10,8 @@
    color: #FFFFFF !important;
 }
 .padding {
-padding-left: 400px;
-padding-right: 400px
+padding-left: 30%;
+padding-right: 30%;
 }
 
 /* This part taken from Admin.vue */
