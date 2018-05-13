@@ -69,6 +69,7 @@ export default {
        document.getElementById("message").value = "";
        msg = msg.trim()
        if(msg.length > 0){
+<<<<<<< HEAD
            database.ref('Broadcast/Message').push('msg');
             //alert(msg);
                     this.$toast.open({
@@ -84,6 +85,12 @@ export default {
                 type: 'is-danger'
             })
         }     
+=======
+           database.ref('Broadcast/Message').push(msg);
+           database.ref('Broadcast/Message/Current').set(msg);
+           database.ref('Broadcast/Message/Check').set("true");
+            alert(msg); }
+>>>>>>> 4d521b9e7b00a315349f507f99e5b33ea8a6aef5
         
     },
     logout: function() {

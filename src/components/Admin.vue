@@ -41,7 +41,7 @@
       </div>
 
       <!-- Hero content: will be in the middle -->
-      <div class="hero-body" style="margin-top: -300px">
+      <div class="hero-body" style="margin-top: -5px">
         <div class="container">
           <h1 class="title">
             Farmers
