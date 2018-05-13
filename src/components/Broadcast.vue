@@ -66,10 +66,24 @@ export default {
   methods:{
     sendMessage: function() {
        var msg = document.getElementById("message").value
+       document.getElementById("message").value = "";
        msg = msg.trim()
        if(msg.length > 0){
            database.ref('Broadcast/Message').push('msg');
-            alert(msg); }
+            //alert(msg);
+                    this.$toast.open({
+                    duration: 3000,    
+                    message: 'Message sent !',
+                    type: 'is-success'
+                })
+             }
+        else{
+            this.$toast.open({
+                duration: 2000,
+                message: 'Oops. cannot broadcast empty message !',
+                type: 'is-danger'
+            })
+        }     
         
     },
     logout: function() {
