@@ -68,19 +68,3 @@ export default {
     }
 }
 </script>
-
-<style>
-.bgcolor {
-     background: #EF5451
- }
- .bodybgcolor {
-  background: #E0E0E0
-}
-.textcolor {
-    color: #FFFFFF !important;
-}
-.padding {
-padding-left: 400px;
-padding-right: 400px
-}
-</style>

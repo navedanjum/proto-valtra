@@ -68,7 +68,6 @@ export default {
   data() {
     return {
       // default to Montreal to keep it simple
-      // change this to whatever makes sense
       center: { lat: 45.508, lng: -73.587 },
       markers: [],
       currentPlace: null
@@ -93,8 +92,8 @@ export default {
     },
     addMarker: function() {
         const marker = {
-          lat: this.lati, //19.116426,  //Here access the coordinates from firebase database
-          lng: this.lon //72.8564961  //Here access the coordinates from firebase database
+          lat: this.lati, 
+          lng: this.lon
         };
         this.markers.push({ position: marker });
         this.center = marker;
@@ -111,12 +110,3 @@ export default {
   }
 };
 </script>
-
-<style>
-.bgcolor {
-     background: #EF5451
- }
-.textcolor {
-    color: #FFFFFF
-}
-</style>

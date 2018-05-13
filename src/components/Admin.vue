@@ -134,22 +134,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.bgcolor {
-     background: #EF5451
- } 
-.bodybgcolor {
-  background: #E0E0E0
-}
-.textcolor {
-    color: #FFFFFF
-}
-.size {
-  height: 37px;
-  width: 100px;
-}
-.center {
-    text-align: center;
-}
-</style>

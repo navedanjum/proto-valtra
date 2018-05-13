@@ -1,0 +1,72 @@
+
+/* This part taken from Login.vue */
+.bgcolor {
+    background: #EF5451
+}
+.bodybgcolor {
+ background: #E0E0E0
+}
+.textcolor {
+   color: #FFFFFF !important;
+}
+.padding {
+padding-left: 400px;
+padding-right: 400px
+}
+
+/* This part taken from Admin.vue */
+.bgcolor {
+    background: #EF5451
+} 
+.bodybgcolor {
+ background: #E0E0E0
+}
+.textcolor {
+   color: #FFFFFF
+}
+.size {
+ height: 37px;
+ width: 100px;
+}
+.center {
+   text-align: center;
+}
+
+/* This part taken from Map.vue */
+.bgcolor {
+    background: #EF5451
+}
+.textcolor {
+   color: #FFFFFF
+}
+
+/* This part taken from Broadcast.vue */
+.bgcolor {
+    background: #EF5451
+}
+.textcolor {
+   color: #FFFFFF
+}
+
+.brdcast {
+height: 500px
+}
+
+textarea {
+ width: 80%;
+ height:30%;
+ border-radius: 5px;
+}
+
+.sendButton {
+   color: #fff;
+   background-color: #5cb85c;
+   border-color: #4cae4c;
+   border: 1px solid transparent;
+   border-radius: 4px;
+   padding: 7px 14px;
+   margin-left: -76%
+}
+
+
+

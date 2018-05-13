@@ -7,6 +7,7 @@ import firebase from 'firebase'
 import animated from 'animate.css'
 import Buefy from 'buefy'
 import 'buefy/lib/buefy.css'
+import './assets/css/custom.css'
 import moment from "moment"
 import * as VueGoogleMaps from 'vue2-google-maps'
  

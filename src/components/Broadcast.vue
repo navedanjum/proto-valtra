@@ -69,7 +69,7 @@ export default {
        document.getElementById("message").value = "";
        msg = msg.trim()
        if(msg.length > 0){
-           database.ref('Broadcast/Message').push('msg');
+           database.ref('Broadcast/Message').push(msg);
            database.ref('Broadcast/Message/Current').set(msg);
            database.ref('Broadcast/Message/Check').set("true");          
             //alert(msg);
@@ -99,32 +99,3 @@ export default {
   }
 };
 </script>
-
-<style>
-.bgcolor {
-     background: #EF5451
- }
-.textcolor {
-    color: #FFFFFF
-}
-
-.brdcast {
-height: 500px
-}
-
-textarea {
-  width: 80%;
-  height:30%;
-  border-radius: 5px;
-}
-
-.sendButton {
-    color: #fff;
-    background-color: #5cb85c;
-    border-color: #4cae4c;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    padding: 7px 14px;
-    margin-left: -76%
-}
-</style>
