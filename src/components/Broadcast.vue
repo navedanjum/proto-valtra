@@ -68,7 +68,9 @@ export default {
        var msg = document.getElementById("message").value
        msg = msg.trim()
        if(msg.length > 0){
-           database.ref('Broadcast/Message').push('msg');
+           database.ref('Broadcast/Message').push(msg);
+           database.ref('Broadcast/Message/Current').set(msg);
+           database.ref('Broadcast/Message/Check').set("true");
             alert(msg); }
         
     },
