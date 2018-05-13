@@ -39,9 +39,9 @@
                     </div>
                     </nav>
                     <div class="brdcast">
-                    <p style="white-space: pre-line;">{{ message }}</p>
+                    <!-- p style="white-space: pre-line;">{{ msgText }}</p-->
                     <br>
-                    <textarea id="message" v-model="message" placeholder="Message to broadcast"></textarea>
+                    <textarea id="message" v-model="msgText" placeholder="Message to broadcast"></textarea>
                     <br>
                     <button class="sendButton" v-on:click="sendMessage">Send</button>
                     </div>
@@ -59,7 +59,7 @@ export default {
   name: "Broadcast", 
   data() {
     return {
-        
+        msgText: ''
     };
   },
 
