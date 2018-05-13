@@ -4,7 +4,7 @@
     background: #EF5451
 }
 .bodybgcolor {
- background: #E0E0E0
+ background: #FFFFFF
 }
 .textcolor {
    color: #FFFFFF !important;
@@ -15,15 +15,6 @@ padding-right: 400px
 }
 
 /* This part taken from Admin.vue */
-.bgcolor {
-    background: #EF5451
-} 
-.bodybgcolor {
- background: #E0E0E0
-}
-.textcolor {
-   color: #FFFFFF
-}
 .size {
  height: 37px;
  width: 100px;
@@ -33,12 +24,6 @@ padding-right: 400px
 }
 
 /* This part taken from Map.vue */
-.bgcolor {
-    background: #EF5451
-}
-.textcolor {
-   color: #FFFFFF
-}
 
 /* This part taken from Broadcast.vue */
 .bgcolor {
@@ -56,6 +41,7 @@ textarea {
  width: 80%;
  height:30%;
  border-radius: 5px;
+ background: #E0E0E0
 }
 
 .sendButton {
