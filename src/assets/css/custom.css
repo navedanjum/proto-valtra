@@ -54,5 +54,11 @@ textarea {
    margin-left: -76%
 }
 
+.google-map {
+  width: 800px;
+  height: 600px;
+  margin: 0 auto;
+  background: gray;
+}
 
 

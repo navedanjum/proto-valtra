@@ -71,6 +71,7 @@
           </table>
         </div>
       </div>
+      <v-button></v-button>
     </section>
     </div>
   </div>
@@ -79,6 +80,7 @@
 <script>
 
 import firebase from 'firebase'
+import Button from './Button'
 
 var config = {
   apiKey: "AIzaSyAn6m6RfMQFhhPe3hHIAqz4yMySBeuvMC8",
@@ -95,6 +97,9 @@ const database = firebase.database()
 
 export default {
   name: 'Admin',
+  components: {
+  'v-button': Button
+  },
   data: function() {
     return {
       users: []
