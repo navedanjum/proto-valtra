@@ -72,11 +72,11 @@
         </div>
       </div>
       <v-button></v-button>
+      <br/>
     </section>
     </div>
   </div>
 </template>
-
 <script>
 
 import firebase from 'firebase'

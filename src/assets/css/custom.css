@@ -54,11 +54,13 @@ textarea {
    margin-left: -76%
 }
 
+/* Button.Vue */
 .google-map {
-  width: 800px;
-  height: 600px;
+  width: 100%;
+  height: 400px;
   margin: 0 auto;
   background: gray;
+  border-style: solid;
 }
 
 
