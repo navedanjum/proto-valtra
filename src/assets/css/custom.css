@@ -63,4 +63,25 @@ textarea {
   border-style: solid;
 }
 
+/*Image */
+.container {
+    float:left;
+    }
+.imageContainer {
+    float: left;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+p {
+    text-align: center;
+}
+
+.location {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    border: 1px solid transparent;
+    border-radius: 4px;
+ }
 

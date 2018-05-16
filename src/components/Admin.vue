@@ -49,26 +49,15 @@
           <!-- <h2 class="subtitle">
             Subtitle
           </h2> -->
-          <table class="table is-striped is-fullwidth">
-          <thead>
-              <tr>
-                  <th class="has-text-center">Picture</th>
-                  <th class="has-text-center">Name</th>
-                  <th class="has-text-center">Location</th>
-                  <th class="has-text-center">Status</th>
-              </tr>
-            </thead>
-            <tbody>
-                <tr v-for="(user, user_index) in users" :key="user_index">
-                    <td class="center">
-                      <img src="../assets/valtrasignature.png" style="width: 50px; height: 50px">
-                    </td>
-                    <td>{{user.Name}}</td>
-                    <td><a @click="loadMap(user.Latitude,user.Longitude)">{{user.Latitude}} / {{user.Longitude}}</a></td>
-                    <td>{{user.Status}}</td>
-                </tr>
-            </tbody>
-          </table>
+                <div class="imageContainer" v-for="(user, user_index) in users" :key="user_index">
+                    <p class="center">
+                      <img src="../assets/images/Aapo.png" style="width: 130px; height: 180px">                     
+                      <p>{{user.Name}}</p>
+                      <p> <a @click="loadMap(user.Latitude,user.Longitude)"><button class="location">Show on Map</button></a> </p>
+                      <p>{{user.Status}}</p>
+                      </br></br>
+                    </p>
+                </div>
         </div>
       </div>
       <v-button></v-button>
