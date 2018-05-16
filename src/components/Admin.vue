@@ -51,7 +51,7 @@
           </h2> -->
                 <div class="imageContainer" v-for="(user, user_index) in users" :key="user_index">
                     <p class="center">
-                      <img src="../assets/images/Aapo.png" style="width: 130px; height: 180px">                     
+                      <img style="width: 90px; height: 120px" :src=user.PhotoUrl>                     
                       <p>{{user.Name}}</p>
                       <p> <a @click="loadMap(user.Latitude,user.Longitude)"><button class="location">Show on Map</button></a> </p>
                       <p>{{user.Status}}</p>

@@ -9,20 +9,29 @@ export default {
     return {
       mapName: this.name + "-map",
       markerCoordinates: [{
+        latitude: 60.177156,
+        longitude: 24.8117839
+      },{
+        latitude: 60.177132,
+        longitude: 24.8337839
+      },{
+        latitude: 60.175182,
+        longitude: 24.8317839
+      },{
         latitude: 60.177182,
         longitude: 24.8317839
       },{
-        latitude: 60.1854372,
-        longitude: 24.832267
+        latitude: 60.1855372,
+        longitude: 24.822267  //purple
       },{
         latitude: 60.1850372,
-        longitude: 24.832267
+        longitude: 24.812267
       }, {
-        latitude: 60.1806559,
+        latitude: 60.1816559,
         longitude: 24.8317836
       }, {
         latitude: 60.1851182,
-        longitude: 24.8317839
+        longitude: 24.8367839
       }],
        map: null,
       bounds: null,
