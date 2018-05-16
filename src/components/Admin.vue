@@ -53,9 +53,8 @@
                     <p class="center">
                       <img style="width: 90px; height: 120px" :src=user.PhotoUrl>                     
                       <p>{{user.Name}}</p>
-                      <p> <a @click="loadMap(user.Latitude,user.Longitude)"><button class="location">Show on Map</button></a> </p>
+                      <p> <a @click="loadMap(user.Latitude,user.Longitude)"><button class="location">Location</button></a> </p>
                       <p>{{user.Status}}</p>
-                      </br></br>
                     </p>
                 </div>
         </div>
