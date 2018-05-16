@@ -43,17 +43,14 @@
       <!-- Hero content: will be in the middle -->
       <div class="hero-body" style="margin-top: -5px">
         <div class="container">
-          <h1 class="title">
-            Farmers
-          </h1>
           <!-- <h2 class="subtitle">
             Subtitle
           </h2> -->
                 <div class="imageContainer" v-for="(user, user_index) in users" :key="user_index">
                     <p class="center">
-                      <img style="width: 90px; height: 120px" :src=user.PhotoUrl>                     
+                      <a @click="loadMap(user.Latitude,user.Longitude)"> <img class="pic" style="width: 90px; height: 100px" :src=user.PhotoUrl> </a>                
                       <p>{{user.Name}}</p>
-                      <p> <a @click="loadMap(user.Latitude,user.Longitude)"><button class="location">Location</button></a> </p>
+                      <!-- <p> <a @click="loadMap(user.Latitude,user.Longitude)"><button class="location">Location</button></a> </p> -->
                       <p>{{user.Status}}</p>
                     </p>
                 </div>
