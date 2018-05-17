@@ -29,6 +29,11 @@
                     <a class="button size" v-on:click="gotoBroadcast">Broadcast</a>
                   </span>
                 </a>
+                <a class="navbar">
+                  <span class="navbar-item bgcolor">
+                    <a class="button size" v-on:click="gotoTask">Task</a>
+                  </span>
+                </a>
               </div>
               <div class="navbar-end">
                 <span class="navbar-item bgcolor">
@@ -120,6 +125,9 @@ export default {
     },
     gotoBroadcast: function() {
         this.$router.replace('broadcast')
+    },
+    gotoTask: function() {
+        this.$router.replace('task')
     }
   }
 }

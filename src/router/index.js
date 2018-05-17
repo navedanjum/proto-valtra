@@ -5,6 +5,7 @@ import Admin from '@/components/Admin'
 import Login from '@/components/Login'
 import Map from '@/components/Map'
 import Broadcast from '@/components/Broadcast'
+import Task from '@/components/Task'
 
 import firebase from 'firebase'
 
@@ -46,6 +47,14 @@ let router = new Router({
       path: '/broadcast',
       name: 'Broadcast',
       component: Broadcast,
+      // meta: {
+      //   requiresAuth: true
+      // }
+    },
+   {
+      path: '/task',
+      name: 'Task',
+      component: Task,
       // meta: {
       //   requiresAuth: true
       // }
