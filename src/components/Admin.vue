@@ -53,7 +53,7 @@
           </h2> -->
                 <div class="imageContainer" v-for="(user, user_index) in users" :key="user_index">
                     <p class="center">
-                      <a @click="loadMap(user.Latitude,user.Longitude)"> <img class="pic" style="width: 90px; height: 100px" :src=user.PhotoUrl> </a>  
+                      <a @click="loadMap(user.Latitude,user.Longitude)"> <img class="pic" :src=user.PhotoUrl> </a>  
                       <br/> <br/>              
                       <p>{{user.Name}}</p>
                       <!-- <p> <a @click="loadMap(user.Latitude,user.Longitude)"><button class="location">Location</button></a> </p> -->
