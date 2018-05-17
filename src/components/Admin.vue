@@ -52,7 +52,7 @@
                       <br/> <br/>              
                       <p>{{user.Name}}</p>
                       <!-- <p> <a @click="loadMap(user.Latitude,user.Longitude)"><button class="location">Location</button></a> </p> -->
-                      <p>{{user.Status}}</p>
+                      <p :id=user.Status>{{user.Status}}</p>
                     </p>
                 </div>
         </div>
@@ -94,8 +94,7 @@ export default {
   mounted: function() {
     console.log("mounted")
     // database.ref('Users').on('child_added', snapshot => this.users.push({name: snapshot.val().Name, location= snapshot.val().Location, status: snapshot.val().Status}))
-    database.ref('Users').on('child_added', snapshot => this.users.push(snapshot.val()))
-  
+    database.ref('Users').on('child_added', snapshot => this.users.push(snapshot.val())) 
   },
   methods: {
     logout: function() {
@@ -124,4 +123,5 @@ export default {
     }
   }
 }
+
 </script>

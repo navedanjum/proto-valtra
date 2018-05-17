@@ -73,10 +73,6 @@ textarea {
     margin-right: 15px;
 }
 
-p {
-    text-align: center;
-}
-
 .location {
     color: #fff;
     background-color: #5cb85c;
@@ -100,4 +96,13 @@ p {
 p {
     font-weight: bold;
     font-size: 14px;
+    text-align: center;
+}
+
+#Offline {
+    color: red;
+}
+
+#Online{
+    color:green;
 }
