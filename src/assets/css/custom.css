@@ -54,6 +54,12 @@ textarea {
    margin-left: -76%
 }
 
+.sendButton:hover {
+    color: #fff;
+    background-color: darkgreen;
+
+ }
+
 /* Button.Vue */
 .google-map {
   width: 96%;
@@ -106,3 +112,17 @@ p {
 #Online{
     color:green;
 }
+
+.button:hover {
+
+    background-color: black;
+    color: white;
+    
+}
+
+.usernameTask {
+    margin-top: 5%;
+    padding-left: 10%;
+    padding-right: 50%;
+}
+    

@@ -57,6 +57,7 @@
                       <br/> <br/>              
                       <p>{{user.Name}}</p>
                       <!-- <p> <a @click="loadMap(user.Latitude,user.Longitude)"><button class="location">Location</button></a> </p> -->
+                      <p >{{user.HeartRate}}</p>
                       <p :id=user.Status>{{user.Status}}</p>
                     </p>
                 </div>

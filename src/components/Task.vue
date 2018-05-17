@@ -39,12 +39,11 @@
                     </div>
                     </nav>
                     <div class="brdcast">
-                       To
-                      <input id="username" type="text" name="firstname" placeholder="type username"><br>
+                            <b-input id="username" class="usernameTask" placeholder="type username" v-model="name"></b-input>                         
                     <!-- p style="white-space: pre-line;">{{ msgText }}</p-->
                     <br>
                     <textarea id="message" v-model="msgText" placeholder="Message to broadcast"></textarea>
-                    <br>
+                    <br><br/>
                     <button class="sendButton" v-on:click="sendMessage">Add Task</button>
                     </div>
                 </div>

@@ -9,6 +9,12 @@ export default {
     return {
       mapName: this.name + "-map",
       markerCoordinates: [{
+        latitude: 60.177456,
+        longitude: 24.8127839
+      },{
+        latitude: 60.177456,
+        longitude: 24.8137839
+      },{
         latitude: 60.177156,
         longitude: 24.8117839
       },{
@@ -55,7 +61,10 @@ export default {
       iconURLPrefix + 'orange-dot.png',
       iconURLPrefix + 'purple-dot.png',
       iconURLPrefix + 'pink-dot.png',      
-      iconURLPrefix + 'yellow-dot.png'
+      iconURLPrefix + 'yellow-dot.png',
+      iconURLPrefix + 'red-dot.png',
+      iconURLPrefix + 'blue-dot.png',
+      iconURLPrefix + 'pink-dot.png' 
     ]
     var iconCounter = 0;
     this.markerCoordinates.forEach((coord) => {
